@@ -8,22 +8,25 @@
 
 body {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(14, 17, 17);
+  background-color: rgb(19, 20, 20);
 }
 
 .nav {
   width: 100%;
-  height: 100px;
-  display: flex;
-  position: sticky;
+  height: 75px;
+  backdrop-filter: blur(6px);
+  border-radius: 0 0 3px 3px;
+  position: fixed;
   top: 0;
   left: 0;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3%;
+  padding: 0 10%;
   color: #fff;
+  z-index: 10;
 }
 
 .nav__logo {
@@ -42,9 +45,220 @@ body {
 .nav__link {
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
 }
 
-.nav__link.active {
+.nav__link--active {
   border-bottom: 3px solid rgb(2, 101, 188);
+}
+
+/* About */
+.about {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__container {
+  width: 90%;
+  height: calc(100% - 160px);
+  display: flex;
+  color: #fff;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.about__image-container {
+  width: 95%;
+  height: calc(100% - 50px);
+  margin: auto;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about__name,
+.about__bio {
+  margin-left: 8px;
+}
+
+.about__name {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.about__name--blue {
+  font-size: 60px;
+  color: rgb(2, 101, 188);
+}
+
+.about__bio {
+  font-size: 16px;
+  line-height: 2rem;
+  padding-right: 3rem;
+}
+
+.btn {
+  color: rgb(2, 101, 188);
+  text-decoration: none;
+  padding: 8px 14px;
+  font-size: 18px;
+  font-weight: bolder;
+  background-color: transparent;
+  transition: background-color 0.4s ease;
+  border: 2px rgb(2, 101, 188) solid;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(0, 51, 95);
+}
+
+/* Projects */
+.projects {
+  width: 100%;
+  height: calc(100vh + 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(31, 30, 30);
+}
+
+.projects__container {
+  width: 95%;
+  height: calc(100% - 160px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.projects__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  width: 425px;
+  height: 320px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project__title {
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.project__image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project__description {
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.4s ease;
+}
+
+.project__image-container:hover > .project__description {
+  transform: translateY(-100%);
+}
+
+.buttons {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Images */
+.project__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contact */
+.contact {
+  width: 100%;
+  height: 100vh;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__text {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact__mail-link {
+  color: rgb(2, 101, 188);
+  font-size: 45px;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(31, 30, 30);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.footer__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.footer__copyright {
+  font-size: 16px;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__mail-link,
+.footer__github-link {
+  margin: 0 24px;
+  font-size: 18px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer__mail-link:hover,
+.footer__github-link:hover {
+  color: rgb(2, 101, 188);
 }
