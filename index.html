@@ -17,26 +17,28 @@
   <body>
     <!-- Nav -->
     <nav class="nav" id="nav">
-      <h1 class="nav__logo">&lt;/MM&gt;</h1>
+      <div class="nav__container">
+        <p class="nav__logo">&lt;/MM&gt;</p>
 
-      <ul class="nav__links-list" id="nav__links-list">
-        <li class="nav__list-item" id="nav__list-item">
-          <a class="nav__link nav__link--active" href="#about">About</a>
-        </li>
-        <li class="nav__list-item" id="nav__list-item">
-          <a class="nav__link" href="#projects">Projects</a>
-        </li>
-        <li class="nav__list-item" id="nav__list-item">
-          <a class="nav__link" href="#contact">Contact</a>
-        </li>
-        <li class="nav__list-item" id="nav__list-item">
-          <a class="nav__link" href="#">Resume</a>
-        </li>
-      </ul>
+        <ul class="nav__links-list" id="nav__links-list">
+          <li class="nav__list-item" id="nav__list-item">
+            <a class="nav__link nav__link--active" href="#about">About</a>
+          </li>
+          <li class="nav__list-item" id="nav__list-item">
+            <a class="nav__link" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item" id="nav__list-item">
+            <a class="nav__link" href="#contact">Contact</a>
+          </li>
+          <li class="nav__list-item" id="nav__list-item">
+            <a class="nav__link" href="#">Resume</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- About -->
-    <section class="about" id="about">
+    <main class="about" id="about">
       <div class="about__container">
         <div class="about__column">
           <div class="about__image-container">
@@ -61,28 +63,100 @@
           </p>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- Projects -->
-    <section class="projects" id="projects">
+    <article class="projects" id="projects">
       <div class="projects__container">
         <div class="projects__box">
           <div class="project">
-            <h2 class="project__title">Project</h2>
+            <h2 class="project__title">NASA Astronomy Picture of the Day</h2>
             <div class="project__image-container">
               <img
                 src="./img/NASA_screenshot.png"
                 alt=""
                 class="project__image"
               />
+            </div>
+          </div>
+          <div class="buttons">
+            <a class="btn" target="_blank" href="#">Live</a>
+            <a
+              class="btn"
+              target="_blank"
+              href="https://github.com/mMartinez00/NASA_APOD"
+              >Repo</a
+            >
+          </div>
+        </div>
 
-              <p class="project__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Obcaecati exercitationem ratione corporis harum cupiditate
-                dolore consequuntur pariatur id blanditiis quia, facere esse
-                delectus laudantium similique fugit officiis itaque nostrum
-                ipsum. A labore nostrum corrupti libero.
-              </p>
+        <div class="projects__box">
+          <div class="project">
+            <h2 class="project__title">Stop Watch</h2>
+            <div class="project__image-container">
+              <img src="./img/stopwatch.png" alt="" class="project__image" />
+            </div>
+          </div>
+          <div class="buttons">
+            <a class="btn" target="_blank" href="#">Live</a>
+            <a
+              class="btn"
+              target="_blank"
+              href="https://github.com/mMartinez00/Stop-Watch"
+              >Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="projects__box">
+          <div class="project">
+            <h2 class="project__title">History Trivia Quiz</h2>
+            <div class="project__image-container">
+              <img
+                src="./img/historytriviaquiz.png"
+                alt=""
+                class="project__image"
+              />
+            </div>
+          </div>
+          <div class="buttons">
+            <a class="btn" target="_blank" href="#">Live</a>
+            <a
+              class="btn"
+              target="_blank"
+              href="https://github.com/mMartinez00/HistoryTriviaQuiz"
+              >Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="projects__box">
+          <div class="project">
+            <h2 class="project__title">Counrty Fact App</h2>
+            <div class="project__image-container">
+              <img src="./img/countryfact.png" alt="" class="project__image" />
+            </div>
+          </div>
+          <div class="buttons">
+            <a class="btn" target="_blank" href="#">Live</a>
+            <a
+              class="btn"
+              target="_blank"
+              href="https://github.com/mMartinez00/Country-App"
+              >Repo</a
+            >
+          </div>
+        </div>
+
+        <div class="projects__box">
+          <div class="project">
+            <h2 class="project__title">Memory Card Game</h2>
+            <div class="project__image-container">
+              <img
+                src="./img/memorycardgame.png"
+                alt=""
+                class="project__image"
+              />
             </div>
           </div>
           <div class="buttons">
@@ -93,136 +167,33 @@
 
         <div class="projects__box">
           <div class="project">
-            <h2 class="project__title">Project</h2>
+            <h2 class="project__title">Time - Weather - To Do</h2>
             <div class="project__image-container">
               <img
-                src="./img/NASA_screenshot.png"
+                src="./img/timeweathertodo.png"
                 alt=""
                 class="project__image"
               />
-
-              <p class="project__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Obcaecati exercitationem ratione corporis harum cupiditate
-                dolore consequuntur pariatur id blanditiis quia, facere esse
-                delectus laudantium similique fugit officiis itaque nostrum
-                ipsum. A labore nostrum corrupti libero.
-              </p>
             </div>
           </div>
           <div class="buttons">
             <a class="btn" target="_blank" href="#">Live</a>
-            <a class="btn" target="_blank" href="#">Repo</a>
-          </div>
-        </div>
-
-        <div class="projects__box">
-          <div class="project">
-            <h2 class="project__title">Project</h2>
-            <div class="project__image-container">
-              <img
-                src="./img/NASA_screenshot.png"
-                alt=""
-                class="project__image"
-              />
-
-              <p class="project__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Obcaecati exercitationem ratione corporis harum cupiditate
-                dolore consequuntur pariatur id blanditiis quia, facere esse
-                delectus laudantium similique fugit officiis itaque nostrum
-                ipsum. A labore nostrum corrupti libero.
-              </p>
-            </div>
-          </div>
-          <div class="buttons">
-            <a class="btn" target="_blank" href="#">Live</a>
-            <a class="btn" target="_blank" href="#">Repo</a>
-          </div>
-        </div>
-
-        <div class="projects__box">
-          <div class="project">
-            <h2 class="project__title">Project</h2>
-            <div class="project__image-container">
-              <img
-                src="./img/NASA_screenshot.png"
-                alt=""
-                class="project__image"
-              />
-
-              <p class="project__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Obcaecati exercitationem ratione corporis harum cupiditate
-                dolore consequuntur pariatur id blanditiis quia, facere esse
-                delectus laudantium similique fugit officiis itaque nostrum
-                ipsum. A labore nostrum corrupti libero.
-              </p>
-            </div>
-          </div>
-          <div class="buttons">
-            <a class="btn" target="_blank" href="#">Live</a>
-            <a class="btn" target="_blank" href="#">Repo</a>
-          </div>
-        </div>
-
-        <div class="projects__box">
-          <div class="project">
-            <h2 class="project__title">Project</h2>
-            <div class="project__image-container">
-              <img
-                src="./img/NASA_screenshot.png"
-                alt=""
-                class="project__image"
-              />
-
-              <p class="project__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Obcaecati exercitationem ratione corporis harum cupiditate
-                dolore consequuntur pariatur id blanditiis quia, facere esse
-                delectus laudantium similique fugit officiis itaque nostrum
-                ipsum. A labore nostrum corrupti libero.
-              </p>
-            </div>
-          </div>
-          <div class="buttons">
-            <a class="btn" target="_blank" href="#">Live</a>
-            <a class="btn" target="_blank" href="#">Repo</a>
-          </div>
-        </div>
-
-        <div class="projects__box">
-          <div class="project">
-            <h2 class="project__title">Project</h2>
-            <div class="project__image-container">
-              <img
-                src="./img/NASA_screenshot.png"
-                alt=""
-                class="project__image"
-              />
-
-              <p class="project__description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Obcaecati exercitationem ratione corporis harum cupiditate
-                dolore consequuntur pariatur id blanditiis quia, facere esse
-                delectus laudantium similique fugit officiis itaque nostrum
-                ipsum. A labore nostrum corrupti libero.
-              </p>
-            </div>
-          </div>
-          <div class="buttons">
-            <a class="btn" target="_blank" href="#">Live</a>
-            <a class="btn" target="_blank" href="#">Repo</a>
+            <a
+              class="btn"
+              target="_blank"
+              href="https://github.com/mMartinez00/Time-Weather-ToDo"
+              >Repo</a
+            >
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
     <!-- Contact -->
     <section class="contact" id="contact">
       <div class="contact__container">
         <p class="contact__text">
-          Lets get in touch! <br />
+          Get in touch! <br />
           <span class="contact__icon">
             <a class="contact__mail-link" href="mailto:mmartinez92293@gmail.com"
               ><i class="fa-regular fa-envelope"></i
@@ -247,6 +218,13 @@
             class="footer__github-link"
             target="_blank"
             ><i class="fa-brands fa-github"></i
+          ></a>
+
+          <a
+            href="https://www.linkedin.com/in/mauricio-martinez-50246324a/"
+            target="_blank"
+            class="footer__linkedin-link"
+            ><i class="fa-brands fa-linkedin"></i
           ></a>
         </div>
       </div>

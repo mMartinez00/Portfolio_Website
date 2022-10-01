@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap");
 
+:root {
+  --main-bg-color: rgb(19, 20, 20);
+  --secondary-bg-color: rgb(31, 30, 30);
+  --dark-blue: rgb(0, 51, 95);
+  --white: #fff;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,23 +17,34 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(19, 20, 20);
+  background-color: var(--main-bg-color);
 }
 
 .nav {
   width: 100%;
-  height: 75px;
-  backdrop-filter: blur(6px);
-  border-radius: 0 0 3px 3px;
+  height: 65px;
   position: fixed;
   top: 0;
   left: 0;
+  color: var(--white);
+  transition: all 0.3s ease-in;
+  z-index: 10;
+}
+
+.nav__container {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  border-radius: 0 0 2px 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  color: #fff;
-  z-index: 10;
+}
+
+.nav--shadow {
+  height: 75px;
+  box-shadow: 0 1px 24px 12px rgb(255 255 255 / 10%);
 }
 
 .nav__logo {
@@ -43,12 +61,14 @@ body {
 }
 
 .nav__link {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.4s ease;
 }
 
 .nav__link--active {
-  border-bottom: 3px solid rgb(2, 101, 188);
+  border-bottom: 3px solid var(--dark-blue);
 }
 
 /* About */
@@ -65,7 +85,7 @@ body {
   width: 90%;
   height: calc(100% - 160px);
   display: flex;
-  color: #fff;
+  color: var(--white);
 }
 
 .about__column {
@@ -76,8 +96,10 @@ body {
 }
 
 .about__image-container {
-  width: 95%;
+  width: 85%;
   height: calc(100% - 50px);
+  background-color: var(--dark-blue);
+  border-radius: 8px;
   margin: auto;
 }
 
@@ -86,6 +108,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  transform: translate(-8px, -8px);
 }
 
 .about__name,
@@ -94,36 +117,34 @@ body {
 }
 
 .about__name {
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 16px;
 }
 
 .about__name--blue {
   font-size: 60px;
-  color: rgb(2, 101, 188);
+  color: var(--dark-blue);
 }
 
 .about__bio {
-  font-size: 16px;
   line-height: 2rem;
   padding-right: 3rem;
 }
 
 .btn {
-  color: rgb(2, 101, 188);
   text-decoration: none;
   padding: 8px 14px;
-  font-size: 18px;
+  color: var(--white);
   font-weight: bolder;
   background-color: transparent;
-  transition: background-color 0.4s ease;
-  border: 2px rgb(2, 101, 188) solid;
+  transition: all 0.4s ease;
+  border: 2px rgb(0, 51, 95) solid;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: rgb(0, 51, 95);
+  background-color: var(--dark-blue);
 }
 
 /* Projects */
@@ -133,11 +154,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(31, 30, 30);
+  background-color: var(--secondary-bg-color);
 }
 
 .projects__container {
-  width: 95%;
+  width: 100%;
   height: calc(100% - 160px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -161,8 +182,9 @@ body {
 
 .project__title {
   text-align: center;
-  color: #fff;
-  font-size: 35px;
+  text-align: center;
+  color: var(--white);
+  font-size: 24px;
   margin-bottom: 8px;
 }
 
@@ -202,7 +224,7 @@ body {
 /* Contact */
 .contact {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 70px);
   margin-top: 80px;
   display: flex;
   justify-content: center;
@@ -211,20 +233,20 @@ body {
 
 .contact__text {
   font-size: 50px;
-  color: #fff;
+  color: var(--white);
   text-align: center;
 }
 
 .contact__mail-link {
-  color: rgb(2, 101, 188);
-  font-size: 45px;
+  color: var(--dark-blue);
+  font-size: 50px;
 }
 
 /* Footer */
 .footer {
   width: 100%;
   height: 70px;
-  background-color: rgb(31, 30, 30);
+  background-color: var(--secondary-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,7 +259,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: var(--white);
 }
 
 .footer__copyright {
@@ -251,14 +273,16 @@ body {
 }
 
 .footer__mail-link,
-.footer__github-link {
-  margin: 0 24px;
+.footer__github-link,
+.footer__linkedin-link {
+  margin: 0 18px;
   font-size: 18px;
-  color: #fff;
+  color: var(--white);
   transition: color 0.3s ease;
 }
 
 .footer__mail-link:hover,
-.footer__github-link:hover {
-  color: rgb(2, 101, 188);
+.footer__github-link:hover,
+.footer__linkedin-link:hover {
+  color: var(--dark-blue);
 }
