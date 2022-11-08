@@ -52,7 +52,7 @@ body {
 }
 
 .nav__logo {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .nav__links-list {
@@ -61,13 +61,12 @@ body {
 }
 
 .nav__list-item {
-  margin: 0 32px;
+  margin: 0 2rem;
 }
 
 .nav__link {
   color: var(--white);
   text-decoration: none;
-  border-bottom: 3px solid transparent;
   transition: border-bottom 0.4s ease;
 }
 
@@ -92,40 +91,25 @@ body {
 }
 
 .about__name {
-  font-size: 24px;
-  margin-bottom: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 .about__name--blue {
-  font-size: 60px;
+  font-size: 3.8rem;
   color: var(--dark-blue);
 }
 
 .about__bio {
+  font-size: 1rem;
   line-height: 2;
   padding-right: 10%;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 8px 14px;
-  color: var(--white);
-  font-weight: bolder;
-  background-color: transparent;
-  transition: all 0.4s ease;
-  border: 2px rgb(0, 51, 95) solid;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--dark-blue);
 }
 
 /* Projects */
 .projects {
   width: 100%;
-  height: calc(100vh + 160px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,11 +117,12 @@ body {
 }
 
 .projects__container {
-  width: 100%;
-  height: calc(100% - 160px);
+  width: 90%;
+  height: 100%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 1.2rem;
 }
 
 .projects__box {
@@ -148,89 +133,96 @@ body {
 }
 
 .project {
-  width: 425px;
-  height: 320px;
-  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 .project__title {
   text-align: center;
-  text-align: center;
   color: var(--white);
-  font-size: 24px;
-  margin-bottom: 8px;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .project__image-container {
-  width: 100%;
+  width: 95%;
   height: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.project__description {
-  width: 100%;
-  height: 100%;
-  transform: translateY(100%);
-  background: rgba(255, 255, 255, 0.8);
-  transition: all 0.4s ease;
-}
-
-.project__image-container:hover > .project__description {
-  transform: translateY(-100%);
-}
-
-.buttons {
-  width: 100%;
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: space-evenly;
+  margin: auto;
 }
 
 /* Images */
 .project__image {
   width: 100%;
   height: 100%;
+  border-radius: 0.5rem;
   object-fit: cover;
+}
+
+/* Buttons */
+.buttons {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.5em 0.9em;
+  color: var(--white);
+  font-size: 1rem;
+  background-color: transparent;
+  transition: all 0.4s ease;
+  border: 2px rgb(0, 51, 95) solid;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--dark-blue);
 }
 
 /* Contact */
 .contact {
   width: 100%;
-  height: calc(100vh - 70px);
-  margin-top: 80px;
+  height: calc(100vh - 4.2rem);
+}
+
+.contact__container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contact__text {
-  font-size: 50px;
+  font-size: 3rem;
   color: var(--white);
   text-align: center;
 }
 
 .contact__mail-link {
   color: var(--dark-blue);
-  font-size: 50px;
+  font-size: 3rem;
 }
 
 /* Footer */
 .footer {
   width: 100%;
-  height: 70px;
+  height: 4.2rem;
   background-color: var(--secondary-bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10%;
 }
 
 .footer__container {
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin: auto;
+  padding: 0 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -238,7 +230,7 @@ body {
 }
 
 .footer__copyright {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .footer__links {
@@ -250,8 +242,8 @@ body {
 .footer__mail-link,
 .footer__github-link,
 .footer__linkedin-link {
-  margin: 0 18px;
-  font-size: 18px;
+  margin: 0 1.2em;
+  font-size: 1rem;
   color: var(--white);
   transition: color 0.3s ease;
 }
