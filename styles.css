@@ -111,9 +111,7 @@ body {
   width: 100%;
   height: 100vh;
   background-color: var(--secondary-bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0.5rem 0;
 }
 
 .projects__container {
@@ -126,6 +124,7 @@ body {
 }
 
 .projects__box {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -265,8 +264,13 @@ body {
     justify-content: center;
   }
 
+  .projects {
+    height: 100%;
+    padding: 1rem 0;
+  }
+
   .projects__container {
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .project__title {
