@@ -55,7 +55,7 @@ body {
   font-size: 2.5rem;
 }
 
-.nav__links-list {
+.nav__links {
   display: flex;
   list-style: none;
 }
