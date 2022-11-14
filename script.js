@@ -28,10 +28,10 @@ function scroll() {
     nav.classList.remove("nav--shadow");
   }
 
-  b();
+  activeLinkScroll();
 }
 
-function a() {
+function activeLink() {
   let current = document.querySelector(".nav__link--active");
 
   current.className = "nav__link";
@@ -39,7 +39,7 @@ function a() {
   this.classList.add("nav__link--active");
 }
 
-function b() {
+function activeLinkScroll() {
   let current = "";
 
   sections.forEach((section) => {
@@ -60,7 +60,7 @@ function b() {
 }
 
 nav__links.forEach((link) => {
-  link.addEventListener("click", a);
+  link.addEventListener("click", activeLink);
 });
 
 window.addEventListener("scroll", () => {
