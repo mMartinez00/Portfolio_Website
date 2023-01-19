@@ -1,7 +1,22 @@
 const nav = document.getElementById("nav");
 const nav__links = document.querySelectorAll(".nav__link");
 const sections = document.querySelectorAll("#about, #projects, #contact");
+const text__El = document.querySelector(".text");
 let throttlePause;
+const text = "Hello I'm";
+let speed = 300;
+let i = 0;
+
+function displayText() {
+  if (i < text.length) {
+    text__El.innerText += text.charAt(i);
+    i++;
+
+    setTimeout(displayText, speed);
+  }
+}
+
+displayText();
 
 function throttle(callback, delay) {
   if (throttlePause) return;
@@ -17,26 +32,18 @@ function throttle(callback, delay) {
 
 function scroll() {
   if (window.scrollY === 0) {
-    nav.classList.remove("nav--shadow");
+    nav.classList.remove("nav--increase");
   }
 
   if (window.scrollY > 20) {
-    nav.classList.add("nav--shadow");
+    nav.classList.add("nav--increase");
   }
 
   if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
-    nav.classList.remove("nav--shadow");
+    nav.classList.remove("nav--increase");
   }
 
   activeLinkScroll();
-}
-
-function activeLink() {
-  let current = document.querySelector(".nav__link--active");
-
-  current.className = "nav__link";
-
-  this.classList.add("nav__link--active");
 }
 
 function activeLinkScroll() {
@@ -60,7 +67,7 @@ function activeLinkScroll() {
 }
 
 nav__links.forEach((link) => {
-  link.addEventListener("click", activeLink);
+  link.addEventListener("click", activeLinkScroll);
 });
 
 window.addEventListener("scroll", () => {
