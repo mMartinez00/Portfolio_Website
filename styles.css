@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap");
 
 :root {
-  --main-bg-color: rgb(19, 20, 20);
-  --secondary-bg-color: rgb(31, 30, 30);
-  --dark-blue: rgb(0, 51, 95);
-  --white: #fff;
+  --main-bg-color: rgb(21, 21, 21);
+  --secondary-bg-color: rgb(38, 36, 36);
+  --light-grey: rgb(88, 87, 87);
+  --green: rgb(1, 89, 55);
+  --white: rgb(246, 231, 231);
 }
 
 * {
@@ -26,7 +27,7 @@ body {
 
 .nav {
   width: 100%;
-  height: 4rem;
+  height: 3.8rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -43,12 +44,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 
-.nav--shadow {
-  height: 4.6em;
-  box-shadow: 0 1px 24px 12px rgb(255 255 255 / 10%);
+.nav.nav--increase {
+  height: 4.4rem;
 }
 
 .nav__logo {
@@ -67,11 +67,13 @@ body {
 .nav__link {
   color: var(--white);
   text-decoration: none;
-  transition: border-bottom 0.4s ease;
+  transition: background-color 0.2s ease-in;
+  padding: 4px 6px;
+  border-radius: 5px;
 }
 
 .nav__link--active {
-  border-bottom: 3px solid var(--dark-blue);
+  background-color: var(--green);
 }
 
 /* About */
@@ -81,50 +83,72 @@ body {
 }
 
 .about__container {
-  width: 90%;
+  width: 95%;
   height: 100%;
   margin: auto;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   color: var(--white);
 }
 
 .about__name {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.about__name--blue {
-  font-size: 3.8rem;
-  color: var(--dark-blue);
+.text {
+  display: block;
+  text-transform: none;
+  font-size: 36px;
+  color: var(--green);
+  white-space: pre-wrap;
+  letter-spacing: 0;
 }
 
-.about__bio {
-  font-size: 1rem;
-  line-height: 2;
-  padding-right: 10%;
+.name {
+  color: var(--white);
+  font-size: 85px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.about__description {
+  flex: 1;
+}
+
+.description {
+  background-color: var(--secondary-bg-color);
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 2rem 1rem;
+  line-height: 2.4;
 }
 
 /* Projects */
 .projects {
   width: 100%;
-  height: 100vh;
-  background-color: var(--secondary-bg-color);
-  padding: 0.5rem 0;
 }
 
 .projects__container {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .projects__box {
-  width: 100%;
+  width: calc(3vw * 10);
+  height: calc(3vw * 8);
+  background-color: var(--secondary-bg-color);
+  margin: 1rem;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,17 +157,18 @@ body {
 
 .project {
   width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .project__title {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
 .project__image-container {
@@ -154,9 +179,9 @@ body {
 
 /* Images */
 .project__image {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -173,15 +198,14 @@ body {
   text-decoration: none;
   padding: 0.5em 0.9em;
   color: var(--white);
-  background-color: transparent;
-  transition: all 0.4s ease;
-  border: 2px rgb(0, 51, 95) solid;
+  background-color: var(--light-grey);
+  transition: all 0.3s ease;
   border-radius: 0.5em;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--green);
 }
 
 /* Contact */
@@ -191,9 +215,9 @@ body {
 }
 
 .contact__container {
-  width: 90%;
+  width: 95%;
   height: 100%;
-  margin: auto;
+  margin: 1rem auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,8 +230,7 @@ body {
 }
 
 .contact__mail-link {
-  color: var(--dark-blue);
-  font-size: 3rem;
+  color: var(--green);
 }
 
 /* Footer */
@@ -238,24 +261,49 @@ body {
   justify-content: space-around;
 }
 
-.footer__mail-link,
-.footer__github-link,
-.footer__linkedin-link {
+.footer__link {
   margin: 0 1.2em;
   font-size: 1rem;
   color: var(--white);
   transition: color 0.3s ease;
 }
 
-.footer__mail-link:hover,
-.footer__github-link:hover,
-.footer__linkedin-link:hover {
-  color: var(--dark-blue);
+.footer__link:hover {
+  color: var(--green);
 }
 
 /* Media Queries */
+@media screen and (max-width: 1430px) {
+  .projects__container {
+    justify-content: center;
+  }
+}
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1030px) {
+  .text {
+    font-size: calc(2vw + 1rem);
+  }
+
+  .name {
+    font-size: calc(4vw + 2.3rem);
+  }
+
+  .description {
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .projects__container {
+    flex-direction: column;
+  }
+
+  .projects__box {
+    width: 340px;
+    height: 325px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .nav__logo {
     display: none;
   }
@@ -264,26 +312,41 @@ body {
     justify-content: center;
   }
 
-  .projects {
-    height: 100%;
-    padding: 1rem 0;
+  .about__container {
+    flex-direction: column;
+  }
+
+  .text {
+    font-size: 1rem;
   }
 
   .projects__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project__title {
-    font-size: 1.3rem;
-  }
-
-  .buttons {
-    font-size: 0.8rem;
+    flex-wrap: nowrap;
   }
 }
 
-@media (max-width: 481px) {
-  .projects__container {
-    grid-template-columns: repeat(1, 1fr);
+@media screen and (max-width: 468px) {
+  .nav__list-item {
+    margin: 0 14px;
+  }
+
+  .about__name {
+    padding-top: 4rem;
+  }
+
+  .name {
+    font-size: 46px;
+  }
+
+  .description {
+    line-height: 1.8;
+  }
+
+  .footer__copyright {
+    font-size: 14px;
+  }
+
+  .footer__link {
+    margin: 0 12px;
   }
 }
